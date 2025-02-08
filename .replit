@@ -5,3 +5,14 @@ channel = "stable-24_05"
 
 [deployment]
 run = ["sh", "-c", "echo 'Hello, Replit!'"]
+
+[workflows]
+runButton = "Run"
+
+[[workflows.workflow]]
+name = "Run"
+author = 6181677
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "bash"
