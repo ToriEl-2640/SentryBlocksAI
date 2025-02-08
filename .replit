@@ -1,0 +1,7 @@
+
+run = "echo 'Hello, Replit!'"
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "echo 'Hello, Replit!'"]
