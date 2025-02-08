@@ -1,5 +1,6 @@
 
 run = "bash"
+modules = ["python-3.11"]
 [nix]
 channel = "stable-24_05"
 
@@ -8,3 +9,23 @@ run = ["sh", "-c", "bash"]
 
 [workflows]
 runButton = "Run"
+
+[[ports]]
+localPort = 33369
+externalPort = 80
+
+[[ports]]
+localPort = 40789
+externalPort = 3003
+
+[[ports]]
+localPort = 41153
+externalPort = 3000
+
+[[ports]]
+localPort = 41367
+externalPort = 3002
+
+[[ports]]
+localPort = 45895
+externalPort = 3001
