@@ -5,7 +5,8 @@ modules = ["nodejs-20", "python-3.11"]
 channel = "stable-24_05"
 
 [deployment]
-run = ["sh", "-c", "bash"]
+run = ["sh", "-c", "cd backend && python main.py"]
+build = ["sh", "-c", "cd frontend && npm run build"]
 
 [workflows]
 runButton = "Run"
