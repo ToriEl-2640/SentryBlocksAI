@@ -7,7 +7,7 @@ export default function Home() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get('http://0.0.0.0:3000/') // Adjust URL to match your backend
+    axios.get(`${window.location.origin}/`) // Use deployment URL
       .then(response => {
         setData(response.data);
       })
