@@ -7,10 +7,8 @@ export default function Home() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get(`${window.location.origin}/`) // Use deployment URL
-      .then(response => {
-        setData(response.data);
-      })
+    // Simplified version without backend calls
+    setData({ message: "Welcome to SentryBlocksAI!" });
       .catch(err => {
         console.error('Axios error:', err);
         setError(err.message);
