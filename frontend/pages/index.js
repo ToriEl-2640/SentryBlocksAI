@@ -7,8 +7,10 @@ export default function Home() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Simplified version without backend calls
-    setData({ message: "Welcome to SentryBlocksAI!" });
+    axios.get('http://0.0.0.0:3000/') // Adjust URL to match your backend
+      .then(response => {
+        setData(response.data);
+      })
       .catch(err => {
         console.error('Axios error:', err);
         setError(err.message);
