@@ -14,3 +14,7 @@ app.add_middleware(
 def home():
     return {'message': 'SentryBlocksAI is live!'}
 
+@app.get('/health')
+def health_check():
+    return {'status': 'healthy'}
+
